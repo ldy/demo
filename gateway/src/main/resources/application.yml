@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: simple
+          uri: http://localhost:8081
+          predicates:
+            - Path=/test/**
+server:
+  port: 8082
